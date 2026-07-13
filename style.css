@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: white;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background: #050505;
+    border-bottom: 3px solid #8000ff;
+}
+
+.navbar h1 {
+    color: #b266ff;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.nav-links a:hover {
+    color: #b266ff;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: #000000;
+}
+
+
+.hero h1 {
+    font-size: 55px;
+    color: #b266ff;
+}
+
+
+.hero p {
+    margin-top: 20px;
+    color: #cccccc;
+}
+
+
+/* BUTTONS */
+
+.main-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 40px;
+    background: #8000ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #b266ff;
+}
+
+
+.main-button:hover {
+    background: #b266ff;
+    color: black;
+}
+
+
+/* DEPARTMENT SECTION */
+
+.departments {
+    text-align: center;
+    padding: 80px 30px;
+}
+
+
+.departments h2 {
+    color: #b266ff;
+    font-size: 40px;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+
+.card {
+    width: 300px;
+    padding: 35px;
+    background: #0d0d0d;
+    border: 2px solid #8000ff;
+    border-radius: 15px;
+}
+
+
+.card:hover {
+    box-shadow: 0 0 20px #8000ff;
+}
+
+
+.card h3 {
+    color: #b266ff;
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    color: #cccccc;
+}
+
+
+/* APPLICATION FORMS */
+
+.application-form {
+
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 45px;
+
+    background: #0d0d0d;
+
+    border: 2px solid #8000ff;
+
+    border-radius: 15px;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 35px;
+
+}
+
+
+.form-group label {
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:white;
+
+}
+
+
+input,
+textarea,
+select {
+
+    width:100%;
+
+    padding:15px;
+
+    background:#000;
+
+    color:white;
+
+    border:2px solid #8000ff;
+
+    border-radius:8px;
+
+}
+
+
+
+textarea {
+
+    min-height:150px;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    margin-top:80px;
+
+    padding:25px;
+
+    text-align:center;
+
+    background:#050505;
+
+    border-top:3px solid #8000ff;
+
+}
