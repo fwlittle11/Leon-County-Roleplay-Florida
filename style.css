@@ -259,3 +259,75 @@ footer {
     transform: scale(0.98);
 
 }
+/* DEPARTMENT DIVISIONS */
+
+
+.division-page {
+
+text-align:center;
+
+padding:50px;
+
+}
+
+
+
+.division-container {
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+
+.division-card {
+
+background:#0b0b0b;
+
+border:2px solid #8a2be2;
+
+border-radius:15px;
+
+padding:30px;
+
+width:380px;
+
+text-align:left;
+
+box-shadow:0 0 15px rgba(138,43,226,0.3);
+
+transition:.3s;
+
+}
+
+
+
+.division-card:hover {
+
+transform:translateY(-5px);
+
+box-shadow:0 0 30px #8a2be2;
+
+}
+
+
+
+.division-card h3 {
+
+color:#c77dff;
+
+text-align:center;
+
+font-size:25px;
+
+margin-bottom:20px;
+
+}
