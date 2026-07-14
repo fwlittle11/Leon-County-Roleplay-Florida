@@ -711,3 +711,45 @@ form .main-button {
 
 
 }
+/* Homepage Information Banner */
+
+.info-banner{
+
+    width:90%;
+    max-width:1000px;
+
+    margin:70px auto;
+
+    background:#0d0d0d;
+
+    border:2px solid #8a2be2;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 0 25px rgba(138,43,226,.35);
+
+}
+
+.info-banner h2{
+
+    color:#c77dff;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.info-banner p{
+
+    color:white;
+
+    font-size:20px;
+
+    line-height:1.6;
+
+}
