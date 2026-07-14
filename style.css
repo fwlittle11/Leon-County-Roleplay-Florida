@@ -483,3 +483,80 @@ box-shadow:0 0 25px #8a2be2;
 transform:translateY(-3px);
 
 }
+/* CIVILIAN APPLICATION FORM */
+
+form {
+
+    width:100%;
+
+}
+
+
+form label {
+
+    color:#c77dff;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+form input,
+form textarea {
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    background:#050505;
+
+    border:2px solid #8a2be2;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+form textarea {
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+
+form input:focus,
+form textarea:focus {
+
+    outline:none;
+
+    box-shadow:0 0 15px #8a2be2;
+
+}
+
+
+form input[type="radio"] {
+
+    width:auto;
+
+    margin:15px;
+
+}
+
+
+form .main-button {
+
+    cursor:pointer;
+
+    width:100%;
+
+}
