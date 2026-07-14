@@ -357,3 +357,88 @@ gap:30px;
 margin-top:40px;
 
 }
+/* HOMEPAGE HERO */
+
+
+.hero {
+
+text-align:center;
+
+padding:90px 20px;
+
+}
+
+
+.hero h1 {
+
+font-size:55px;
+
+color:#c77dff;
+
+text-shadow:0 0 20px #8a2be2;
+
+}
+
+
+
+.hero p {
+
+max-width:800px;
+
+margin:25px auto;
+
+font-size:20px;
+
+color:white;
+
+}
+
+
+
+.hero-buttons {
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+
+
+.main-button {
+
+padding:15px 35px;
+
+background:#0b0b0b;
+
+border:2px solid #8a2be2;
+
+border-radius:12px;
+
+color:#c77dff;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+
+.main-button:hover {
+
+background:#8a2be2;
+
+color:white;
+
+box-shadow:0 0 25px #8a2be2;
+
+transform:translateY(-3px);
+
+}
