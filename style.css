@@ -1,187 +1,713 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leon County Roleplay</title>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: white;
+}
 
-<body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">
-            <h1>Leon County RP</h1>
-        </div>
+/* NAVBAR */
 
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="https://discord.gg/XZbQ9eDGBN" target="_blank">Discord</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="rules.html">Rules</a></li>
-            <li><a href="applications.html">Applications</a></li>
-            <li><a href="divisions.html">Dept Divisions</a></li>
-        </ul>
-    </nav>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background: #050505;
+    border-bottom: 3px solid #8000ff;
+}
 
-    <!-- Hero -->
-    <header class="hero">
+.navbar h1 {
+    color: #b266ff;
+}
 
-        <h1>Leon County Roleplay</h1>
 
-        <p>
-            A professional FiveM roleplay community dedicated to
-            realistic law enforcement, fire rescue, EMS, and civilian
-            roleplay.
-        </p>
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+}
 
-        <div class="hero-buttons">
-            <a href="https://discord.gg/XZbQ9eDGBN" target="_blank" class="main-button">
-                Join Discord
-            </a>
+.nav-links a:hover {
+    color: #b266ff;
+}
 
-            <a href="applications.html" class="secondary-button">
-                Apply Today
-            </a>
-        </div>
 
-    </header>
+/* HERO */
 
-    <!-- Auto Slider -->
-    <section class="slider-section">
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: #000000;
+}
 
-        <div class="slider">
 
-            <div class="slide active">
-                <h2>🚔 Professional Departments</h2>
-                <p>
-                    Police • Sheriff's Office • Florida Highway Patrol • Fire • EMS • Civilian
-                </p>
-            </div>
+.hero h1 {
+    font-size: 55px;
+    color: #b266ff;
+}
 
-            <div class="slide">
-                <h2>⭐ Realistic Roleplay</h2>
-                <p>
-                    Experience immersive roleplay with active staff and realistic scenarios.
-                </p>
-            </div>
 
-            <div class="slide">
-                <h2>🛒 Official Store</h2>
-                <p>
-                    Purchase department packs and support the community.
-                </p>
-            </div>
+.hero p {
+    margin-top: 20px;
+    color: #cccccc;
+}
 
-            <div class="slide">
-                <h2>🛡️ Professional Staff Team</h2>
-                <p>
-                    Dedicated staff providing a fair, organized, and enjoyable experience.
-                </p>
-            </div>
 
-        </div>
+/* BUTTONS */
 
-        <div class="slider-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
+.main-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 40px;
+    background: #8000ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #b266ff;
+}
 
-    </section>
 
-    <!-- Why Choose Us -->
-    <section class="features">
+.main-button:hover {
+    background: #b266ff;
+    color: black;
+}
 
-        <h2>Why Choose Leon County RP?</h2>
 
-        <div class="feature-grid">
+/* DEPARTMENT SECTION */
 
-            <div class="feature-card">
-                <h3>🚔 Professional Departments</h3>
-                <p>Organized law enforcement, fire, EMS, and civilian operations.</p>
-            </div>
+.departments {
+    text-align: center;
+    padding: 80px 30px;
+}
 
-            <div class="feature-card">
-                <h3>👥 Active Community</h3>
-                <p>Join a growing community with active players and events.</p>
-            </div>
 
-            <div class="feature-card">
-                <h3>⭐ Quality Roleplay</h3>
-                <p>Focused on realistic, immersive, and enjoyable roleplay.</p>
-            </div>
+.departments h2 {
+    color: #b266ff;
+    font-size: 40px;
+}
 
-        </div>
 
-    </section>
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
 
-    <!-- Departments -->
 
-    <section class="departments">
+.card {
+    width: 300px;
+    padding: 35px;
+    background: #0d0d0d;
+    border: 2px solid #8000ff;
+    border-radius: 15px;
+}
 
-        <h2>Our Departments</h2>
 
-        <div class="department-grid">
+.card:hover {
+    box-shadow: 0 0 20px #8000ff;
+}
 
-            <div class="department-card">
-                <h3>🚔 Police</h3>
-            </div>
 
-            <div class="department-card">
-                <h3>⭐ Sheriff's Office</h3>
-            </div>
+.card h3 {
+    color: #b266ff;
+    margin-bottom: 15px;
+}
 
-            <div class="department-card">
-                <h3>🚓 Florida Highway Patrol</h3>
-            </div>
 
-            <div class="department-card">
-                <h3>🚒 Fire Rescue</h3>
-            </div>
+.card p {
+    color: #cccccc;
+}
 
-            <div class="department-card">
-                <h3>🚑 EMS</h3>
-            </div>
 
-            <div class="department-card">
-                <h3>👤 Civilian</h3>
-            </div>
+/* APPLICATION FORMS */
 
-        </div>
+.application-form {
 
-    </section>
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 45px;
 
-    <!-- CTA -->
+    background: #0d0d0d;
 
-    <section class="cta">
+    border: 2px solid #8000ff;
 
-        <h2>Ready to Join?</h2>
+    border-radius: 15px;
 
-        <p>
-            Become part of Leon County Roleplay today.
-        </p>
+}
 
-        <a href="applications.html" class="main-button">
-            Apply Now
-        </a>
 
-    </section>
+.form-group {
 
-    <!-- Footer -->
+    margin-bottom: 35px;
 
-    <footer>
+}
 
-        <p>
-            © 2026 Leon County Roleplay • All Rights Reserved
-        </p>
 
-    </footer>
+.form-group label {
 
-    <script src="script.js"></script>
+    display:block;
 
-</body>
-</html>
+    margin-bottom:12px;
+
+    color:white;
+
+}
+
+
+input,
+textarea,
+select {
+
+    width:100%;
+
+    padding:15px;
+
+    background:#000;
+
+    color:white;
+
+    border:2px solid #8000ff;
+
+    border-radius:8px;
+
+}
+
+
+
+textarea {
+
+    min-height:150px;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    margin-top:80px;
+
+    padding:25px;
+
+    text-align:center;
+
+    background:#050505;
+
+    border-top:3px solid #8000ff;
+
+}
+/* =========================
+   PREMIUM PURPLE SUBMIT BUTTON
+========================= */
+
+.submit-button {
+
+    width: 100%;
+
+    padding: 18px;
+
+    margin-top: 25px;
+
+    background: #0a0a0a;
+
+    color: #c77dff;
+
+    border: 2px solid #8a2be2;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    text-transform: uppercase;
+
+    box-shadow: 0 0 10px rgba(138,43,226,0.4);
+
+}
+
+
+.submit-button:hover {
+
+    background: #8a2be2;
+
+    color: white;
+
+    box-shadow: 0 0 25px #8a2be2;
+
+    transform: translateY(-3px);
+
+}
+
+
+.submit-button:active {
+
+    transform: scale(0.98);
+
+}
+/* DEPARTMENT DIVISIONS */
+
+
+.division-page {
+
+text-align:center;
+
+padding:50px;
+
+}
+
+
+
+.division-container {
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+
+.division-card {
+
+background:#0b0b0b;
+
+border:2px solid #8a2be2;
+
+border-radius:15px;
+
+padding:30px;
+
+width:380px;
+
+text-align:left;
+
+box-shadow:0 0 15px rgba(138,43,226,0.3);
+
+transition:.3s;
+
+}
+
+
+
+.division-card:hover {
+
+transform:translateY(-5px);
+
+box-shadow:0 0 30px #8a2be2;
+
+}
+/* HOMEPAGE SECTIONS */
+
+.hero + .division-page {
+    margin-top: 40px;
+}
+
+
+.hero ~ .division-page {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+/* Department Section Highlight */
+
+.hero ~ .division-page:last-of-type {
+
+    margin-top: 50px;
+
+    border-top: 2px solid #8a2be2;
+
+    border-bottom: 2px solid #8a2be2;
+
+    background:#080808;
+
+    box-shadow:0 0 20px rgba(138,43,226,0.25);
+
+}
+
+
+
+.hero ~ .division-page h2 {
+
+    font-size:40px;
+
+    color:#c77dff;
+
+    text-shadow:0 0 15px #8a2be2;
+
+    margin-bottom:35px;
+
+}
+
+
+.division-card h3 {
+
+color:#c77dff;
+
+text-align:center;
+
+font-size:25px;
+
+margin-bottom:20px;
+
+}
+/* MATCH STORE + RULES WITH DIVISIONS */
+
+.store-page,
+.rules-page {
+
+text-align:center;
+
+padding:50px;
+
+}
+
+
+.store-cards,
+.rules-container {
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:30px;
+
+margin-top:40px;
+
+}
+/* HOMEPAGE HERO */
+
+
+.hero {
+
+text-align:center;
+
+padding:90px 20px;
+
+}
+
+
+.hero h1 {
+
+font-size:55px;
+
+color:#c77dff;
+
+text-shadow:0 0 20px #8a2be2;
+
+}
+
+
+
+.hero p {
+
+max-width:800px;
+
+margin:25px auto;
+
+font-size:20px;
+
+color:white;
+
+}
+
+
+
+.hero-buttons {
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+
+
+.main-button {
+
+padding:15px 35px;
+
+background:#0b0b0b;
+
+border:2px solid #8a2be2;
+
+border-radius:12px;
+
+color:#c77dff;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+
+.main-button:hover {
+
+background:#8a2be2;
+
+color:white;
+
+box-shadow:0 0 25px #8a2be2;
+
+transform:translateY(-3px);
+
+}
+/* CIVILIAN APPLICATION FORM */
+
+form {
+
+    width:100%;
+
+}
+
+
+form label {
+
+    color:#c77dff;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+form input,
+form textarea {
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    background:#050505;
+
+    border:2px solid #8a2be2;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+form textarea {
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+
+form input:focus,
+form textarea:focus {
+
+    outline:none;
+
+    box-shadow:0 0 15px #8a2be2;
+
+}
+
+
+form input[type="radio"] {
+
+    width:auto;
+
+    margin:15px;
+
+}
+
+
+form .main-button {
+
+    cursor:pointer;
+
+    width:100%;
+
+}
+/* APPLICATION PAGES */
+
+
+.application-page {
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:60px 20px;
+
+}
+
+
+
+.application-box {
+
+    width:700px;
+
+    background:#0b0b0b;
+
+    border:2px solid #8a2be2;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    box-shadow:0 0 25px rgba(138,43,226,0.35);
+
+}
+
+
+
+.application-box h2 {
+
+    text-align:center;
+
+    color:#c77dff;
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.application-box p {
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.application-box label {
+
+    display:block;
+
+    color:#c77dff;
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.application-box input,
+.application-box textarea,
+.application-box select {
+
+
+    width:100%;
+
+    padding:12px;
+
+    background:#050505;
+
+    color:white;
+
+    border:2px solid #8a2be2;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+
+
+.application-box textarea {
+
+    height:130px;
+
+    resize:vertical;
+
+}
+
+
+
+.application-box button {
+
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:15px;
+
+
+    background:#0b0b0b;
+
+    color:#c77dff;
+
+    border:2px solid #8a2be2;
+
+    border-radius:12px;
+
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+
+
+.application-box button:hover {
+
+
+    background:#8a2be2;
+
+    color:white;
+
+    box-shadow:0 0 25px #8a2be2;
+
+
+}
