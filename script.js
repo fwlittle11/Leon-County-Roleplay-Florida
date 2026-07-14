@@ -101,21 +101,26 @@ timestamp:new Date()
 })
 
 
-.then(response=>{
+.then(async response => {
 
-if(response.ok){
+    const text = await response.text();
 
-alert("Application Submitted!");
+    console.log("Discord Response:", text);
 
-form.reset();
+    if (response.ok) {
 
-}
+        alert("Application Submitted!");
 
-else{
+        form.reset();
 
-alert("Failed to send application.");
+    } else {
 
-console.log(response);
+        alert("Failed to send application.");
+
+    }
+
+})
+  console.log(response);
 
 }
 
