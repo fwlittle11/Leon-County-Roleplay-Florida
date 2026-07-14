@@ -866,62 +866,7 @@ form .main-button {
     background: #c77dff;
     color: black;
     transform: scale(1.05);
-}
-/* =========================
-   SERVER RULES
-========================= */
 
-.rules-page {
-    text-align: center;
-    padding: 60px 40px;
-}
-
-
-.rules-page h1 {
-    color: #c77dff;
-    font-size: 45px;
-    text-shadow: 0 0 15px #8a2be2;
-    margin-bottom: 40px;
-}
-
-
-.rules-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-
-.rules-card {
-    background: #0b0b0b;
-    border: 2px solid #8a2be2;
-    border-radius: 15px;
-    padding: 30px;
-    text-align: left;
-    transition: .3s;
-    box-shadow: 0 0 15px rgba(138,43,226,.3);
-}
-
-
-.rules-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 30px #8a2be2;
-}
-
-
-.rules-card h3 {
-    color: #c77dff;
-    font-size: 26px;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-
-.rules-card p {
-    color: white;
-    line-height: 1.8;
-    font-size: 16px;
-}
 /* =========================
    RULES PAGE
 ========================= */
