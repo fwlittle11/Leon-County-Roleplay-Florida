@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Florida State Trooper Application | Leon County RP</title>
+<title>FHP Application | Leon County RP</title>
 
 <link rel="stylesheet" href="../style.css">
 
@@ -39,126 +39,108 @@
 </nav>
 
 
-<!-- APPLICATION FORM -->
-
-<section class="application-form">
 
 
-<h1>Florida Highway Patrol Application</h1>
+<section class="application-page">
+
+
+<div class="application-box">
+
+
+<h2>🚓 Florida Highway Patrol Application</h2>
+
+<p>
+Apply to join the Florida Highway Patrol.
+Protect highways, enforce traffic laws, and provide professional statewide law enforcement roleplay.
+</p>
 
 
 
 
-<div class="form-group">
+<form id="applicationForm">
+
+
 
 <label>Discord Username</label>
 
-<input type="text" placeholder="Enter your Discord username">
+<input 
+name="Discord Username"
+type="text"
+placeholder="Enter your Discord username"
+>
 
-</div>
 
-
-
-
-<div class="form-group">
 
 <label>FiveM Username</label>
 
-<input type="text" placeholder="Enter your FiveM name">
+<input 
+name="FiveM Username"
+type="text"
+placeholder="Enter your FiveM name"
+>
 
-</div>
 
-
-
-
-<div class="form-group">
 
 <label>Age</label>
 
-<input type="number" placeholder="Enter your age">
-
-</div>
-
-
-
-
-<div class="form-group">
-
-<label>Do you have previous law enforcement experience?</label>
-
-<select>
-
-<option>Yes</option>
-
-<option>No</option>
-
-</select>
-
-</div>
+<input 
+name="Age"
+type="number"
+placeholder="Enter your age"
+>
 
 
 
+<label>Describe your FiveM roleplay experience</label>
 
-<div class="form-group">
-
-<label>Explain your previous roleplay experience</label>
-
-<textarea placeholder="Describe your experience..."></textarea>
-
-</div>
+<textarea
+name="RP Experience"
+placeholder="Explain your experience with roleplay">
+</textarea>
 
 
 
+<label>Why do you want to join Florida Highway Patrol?</label>
 
-<div class="form-group">
-
-<label>Why do you want to become a Florida State Trooper?</label>
-
-<textarea placeholder="Explain your motivation..."></textarea>
-
-</div>
+<textarea
+name="Reason For Joining"
+placeholder="Explain why you want to become a trooper">
+</textarea>
 
 
 
+<label>What is the responsibility of a state trooper?</label>
 
-<div class="form-group">
-
-<label>What is the responsibility of a Highway Patrol Trooper?</label>
-
-<textarea placeholder="Your answer..."></textarea>
-
-</div>
+<textarea
+name="Trooper Responsibilities"
+placeholder="Your answer">
+</textarea>
 
 
-
-
-<div class="form-group">
 
 <label>How would you handle a high-speed pursuit?</label>
 
-<textarea placeholder="Explain your decision making..."></textarea>
-
-</div>
-
-
-
-
-<div class="form-group">
-
-<label>What does professionalism mean in law enforcement?</label>
-
-<textarea placeholder="Your answer..."></textarea>
-
-</div>
+<textarea
+name="Pursuit Scenario"
+placeholder="Explain your actions">
+</textarea>
 
 
 
+<label>How would you handle a civilian refusing to cooperate?</label>
 
-<div class="form-group">
+<textarea
+name="Civilian Interaction"
+placeholder="Explain your response">
+</textarea>
 
-<label>Are you willing to complete training and follow the chain of command?</label>
 
-<select>
+
+<label>Are you familiar with traffic enforcement procedures?</label>
+
+<select name="Traffic Enforcement Knowledge">
+
+<option>Select Answer</option>
 
 <option>Yes</option>
 
@@ -166,35 +148,40 @@
 
 </select>
 
-</div>
+
+
+<label>Are you willing to follow FHP SOPs and Chain of Command?</label>
+
+<select name="SOP Agreement">
+
+<option>Select Answer</option>
+
+<option>Yes</option>
+
+<option>No</option>
+
+</select>
 
 
 
 
-<div class="form-group">
-
-<label>Why should FHP choose you?</label>
-
-<textarea placeholder="Explain why you should be accepted..."></textarea>
-
-</div>
-
-
-
-
-<button class="submit-button">
-
-Submit Application
-
+<button type="submit">
+Submit FHP Application
 </button>
 
+
+
+</form>
+
+
+</div>
 
 
 </section>
 
 
 
-<form id="applicationForm">
+
 <footer>
 
 <p>
@@ -204,7 +191,10 @@ Submit Application
 </footer>
 
 
+
 <script src="../script.js"></script>
+
+
 </body>
 
 </html>
