@@ -1,124 +1,140 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const form = document.getElementById("applicationForm");
+const form = document.getElementById("applicationForm");
 
-    if (!form) return;
-
-
-    form.addEventListener("submit", function (event) {
-
-        event.preventDefault();
+if (!form) return;
 
 
-        const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW";
+form.addEventListener("submit", function(event){
+
+event.preventDefault();
 
 
-        const formData = new FormData(form);
+const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW";
 
 
-        let type = formData.get("type");
+const formData = new FormData(form);
 
 
-        let roleID = "";
+let type = formData.get("type") || "General";
 
 
-        if(type === "Sheriff"){
-            roleID = "1510682249782362334";
-        }
+let roleID = "";
 
 
-        if(type === "FHP"){
-            roleID = "1510682249782362336";
-        }
+if(type === "Sheriff"){
+roleID = "1510682249782362334";
+}
 
+else if(type === "FHP"){
+roleID = "1510682249782362336";
+}
 
-        if(type === "Police"){
-            roleID = "1510682249782362333";
-        }
+else if(type === "Police"){
+roleID = "1510682249782362333";
+}
 
+else if(type === "Fire"){
+roleID = "1510682249782362335";
+}
 
-        if(type === "Fire"){
-            roleID = "1510682249782362335";
-        }
+else if(type === "EMS"){
+roleID = "1510682249782362335";
+}
 
-
-        if(type === "EMS"){
-            roleID = "1510682249782362335";
-        }
-
-
-        if(type === "Civilian"){
-            roleID = "1510682249828368476";
-        }
+else if(type === "Civilian"){
+roleID = "1510682249828368476";
+}
 
 
 
-        let applicationAnswers = "";
+let answers = "";
 
 
-        formData.forEach((value, key) => {
+formData.forEach((value,key)=>{
 
-            applicationAnswers += `**${key}:** ${value}\n`;
+answers += `**${key}:** ${value}\n`;
 
-        });
-
-
-
-        const embed = {
-
-            title: `📋 New ${type} Application`,
-
-            description: applicationAnswers,
-
-            color: 10181046,
-
-
-            footer: {
-
-                text: "Leon County Roleplay Applications"
-
-            },
-
-
-            timestamp: new Date()
-
-        };
+});
 
 
 
-       fetch(webhookURL, {
+fetch(webhookURL,{
 
-    method:"POST",
+method:"POST",
 
-    headers:{
-        "Content-Type":"application/json"
-    },
+headers:{
+"Content-Type":"application/json"
+},
 
-    body:JSON.stringify({
 
-        username:"Leon County RP Applications",
+body:JSON.stringify({
 
-        content:`<@&${roleID}> New ${type} Application Received!`,
+username:"Leon County RP Applications",
 
-        allowed_mentions:{
-            roles:[roleID]
-        },
+content:`<@&${roleID}> New ${type} Application Received!`,
 
-        embeds:[{
-            title:`📋 New ${type} Application`,
-            description:applicationAnswers,
-            color:10181046,
-            footer:{
-                text:"Leon County Roleplay Applications"
-            },
-            timestamp:new Date()
-        }]
+allowed_mentions:{
+roles:[roleID]
+},
 
-    })
+
+embeds:[{
+
+title:`📋 New ${type} Application`,
+
+description:answers,
+
+color:10181046,
+
+
+footer:{
+text:"Leon County Roleplay Applications"
+},
+
+timestamp:new Date()
+
+}]
+
+})
 
 })
 
 
+.then(response=>{
+
+if(response.ok){
+
+alert("Application Submitted!");
+
+form.reset();
+
+}
+
+else{
+
+alert("Failed to send application.");
+
+console.log(response);
+
+}
+
+})
+
+
+.catch(error=>{
+
+console.error(error);
+
+alert("Webhook Error");
+
+});
+
+
+});
+
+
+});
 });
 const bannerData = [
 
