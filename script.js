@@ -1,67 +1,98 @@
-const webhookURL = "https://discordapp.com/api/webhooks/1526352379048497224/164kn1Z6Xp1gzMd6cvAY6PjYC7L7yLkyZIxtVLEjszu9RK6z8at4Wvmbi-4Z9FeXhEBz";
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("applicationForm");
+
+    if (!form) return;
 
 
-document.querySelector(".application-form").addEventListener("submit", function(e) {
+    form.addEventListener("submit", function (event) {
 
-    e.preventDefault();
-
-
-    const formData = new FormData(this);
-
-    let application = "";
+        event.preventDefault();
 
 
-    for (let [question, answer] of formData.entries()) {
-
-        application += `**${question}:**\n${answer}\n\n`;
-
-    }
+        const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW";
 
 
+        const formData = new FormData(form);
 
-    fetch(webhookURL, {
 
-        method: "POST",
+        let answers = "";
 
-        headers: {
-            "Content-Type": "application/json"
-        },
 
-        body: JSON.stringify({
+        formData.forEach((value, key) => {
 
-            username: "Leon County RP Applications",
+            answers += `**${key}:** ${value}\n`;
 
-            embeds: [
-                {
-                    title: "📋 New Department Application",
+        });
 
-                    description: application,
 
-                    color: 10181046,
 
-                    footer: {
-                        text: "Leon County Roleplay"
-                    },
+        const embed = {
 
-                    timestamp: new Date()
-                }
-            ]
+            title: "📋 New Leon County RP Application",
+
+            description: answers,
+
+            color: 10181046,
+
+            footer: {
+
+                text: "Leon County Roleplay Applications"
+
+            },
+
+            timestamp: new Date()
+
+        };
+
+
+
+        fetch(webhookURL, {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type": "application/json"
+
+            },
+
+            body: JSON.stringify({
+
+                username: "Leon County RP Applications",
+
+                embeds: [embed]
+
+            })
 
         })
 
-    })
 
-    .then(() => {
+        .then(response => {
 
-        alert("Application submitted successfully!");
+            if (response.ok) {
 
-        this.reset();
+                alert("Application Submitted Successfully!");
 
-    })
+                form.reset();
 
-    .catch(() => {
+            } else {
 
-        alert("There was an error submitting your application.");
+                alert("Application failed to send.");
+
+            }
+
+        })
+
+
+        .catch(error => {
+
+            console.error(error);
+
+            alert("Error sending application.");
+
+        });
+
 
     });
 
