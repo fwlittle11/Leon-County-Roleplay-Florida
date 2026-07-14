@@ -76,24 +76,54 @@ roles:[roleID]
 
 embeds:[{
 
-title:`📋 New ${type} Application`,
+    title:`📨 ${type} Application Submitted`,
 
-description:answers,
+    description:
+    "A new application has been received and is awaiting review.",
 
-color:10181046,
+    color:10181046,
 
+    thumbnail:{
+        url:"https://i.imgur.com/yourlogo.png"
+    },
 
-footer:{
-text:"Leon County Roleplay Applications"
-},
+    fields:[
 
-timestamp:new Date()
+        {
+            name:"👤 Applicant",
+            value:formData.get("Discord Username") || "Not Provided",
+            inline:true
+        },
+
+        {
+            name:"🎮 FiveM Username",
+            value:formData.get("FiveM Username") || "Not Provided",
+            inline:true
+        },
+
+        {
+            name:"📂 Department",
+            value:type,
+            inline:true
+        },
+
+        {
+            name:"📝 Application Responses",
+            value:answers.length > 1024
+                ? answers.substring(0,1020) + "..."
+                : answers
+        }
+
+    ],
+
+    footer:{
+        text:"Leon County Roleplay Recruitment Division"
+    },
+
+    timestamp:new Date().toISOString()
 
 }]
 
-})
-
-})
 
 
 .then(async response => {
