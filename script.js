@@ -10,7 +10,7 @@ form.addEventListener("submit", function(event){
 event.preventDefault();
 
 
-const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW";
+const webhookURL = "https://discord.com/api/webhooks/..."
 
 
 const formData = new FormData(form);
@@ -118,11 +118,6 @@ timestamp:new Date()
         alert("Failed to send application.");
 
     }
-
-})
-  console.log(response);
-
-}
 
 })
 
