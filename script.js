@@ -1,160 +1,100 @@
-// ===============================
-// LEON COUNTY ROLEPLAY SCRIPT
-// ===============================
-
-// ---------- HOMEPAGE SLIDER ----------
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
-
-    if (slides.length > 0) {
-
-        let currentSlide = 0;
-
-        function showSlide(index) {
-
-            slides.forEach(slide => slide.classList.remove("active"));
-            dots.forEach(dot => dot.classList.remove("active"));
-
-            slides[index].classList.add("active");
-            dots[index].classList.add("active");
-        }
-
-        setInterval(() => {
-
-            currentSlide++;
-
-            if (currentSlide >= slides.length) {
-
-                currentSlide = 0;
-
-            }
-
-            showSlide(currentSlide);
-
-        }, 4000);
-
-    }
-
-});
-
-
-// ---------- APPLICATION FORM ----------
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("applicationForm");
 
     if (!form) return;
 
-    form.addEventListener("submit", async function (e) {
 
-        e.preventDefault();
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+
+        // PUT YOUR NEW DISCORD WEBHOOK HERE
+        const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW";
+
 
         const formData = new FormData(form);
 
-        let applicationText = "";
+
+        let applicationAnswers = "";
+
 
         formData.forEach((value, key) => {
 
-            applicationText += `${key}: ${value}\n`;
+            applicationAnswers += `**${key}:** ${value}\n`;
 
         });
 
-        // ==========================================
-        // PASTE YOUR NEW DISCORD WEBHOOK BELOW
-        // ==========================================
 
-        const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW";
 
-        if (webhookURL === "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW") {
+        const embed = {
 
-            alert("Webhook has not been configured yet.");
+            title: "📋 New Leon County RP Application",
 
-            console.log(applicationText);
+            description: applicationAnswers,
 
-            return;
+            color: 10181046,
 
-        }
+            footer: {
 
-        const payload = {
+                text: "Leon County Roleplay Applications"
 
-            username: "Leon County RP Applications",
+            },
 
-            embeds: [
-
-                {
-
-                    title: "📋 New Department Application",
-
-                    description: "A new application has been submitted.",
-
-                    color: 8388736,
-
-                    fields: [
-
-                        {
-
-                            name: "Application",
-
-                            value: "```" + applicationText + "```"
-
-                        }
-
-                    ],
-
-                    footer: {
-
-                        text: "Leon County Roleplay"
-
-                    },
-
-                    timestamp: new Date().toISOString()
-
-                }
-
-            ]
+            timestamp: new Date()
 
         };
 
-        try {
 
-            const response = await fetch(webhookURL, {
 
-                method: "POST",
+        fetch(webhookURL, {
 
-                headers: {
+            method: "POST",
 
-                    "Content-Type": "application/json"
+            headers: {
 
-                },
+                "Content-Type": "application/json"
 
-                body: JSON.stringify(payload)
+            },
 
-            });
+            body: JSON.stringify({
+
+                username: "Leon County RP Applications",
+
+                embeds: [embed]
+
+            })
+
+        })
+
+        .then(response => {
 
             if (response.ok) {
 
-                alert("Application submitted successfully!");
+                alert("Application Submitted!");
 
                 form.reset();
 
             } else {
 
-                alert("Failed to submit application.");
+                alert("Failed to send application.");
 
             }
 
-        } catch (err) {
+        })
 
-            console.error(err);
 
-            alert("Unable to connect to Discord.");
+        .catch(error => {
 
-        }
+            console.error(error);
+
+            alert("Error sending application.");
+
+        });
+
 
     });
+
 
 });
