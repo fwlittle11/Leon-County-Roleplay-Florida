@@ -135,7 +135,6 @@ alert("Webhook Error");
 
 
 });
-});
 const bannerData = [
 
 {
