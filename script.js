@@ -10,9 +10,17 @@ function sendApplication(type, data) {
         roleID = "1510682249782362336";
     }
 
+     if(type === "Police"){
+        roleID = "1510682249782362333";
+    }
+
     if(type === "Fire"){
         roleID = "1510682249782362335";
     }
+
+if(type === "EMS"){
+    roleID = "1510682249782362335";
+}
 
     if(type === "Civilian"){
         roleID = "1510682249828368476";
