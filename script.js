@@ -1,3 +1,56 @@
+function sendApplication(type, data) {
+
+    let roleID = "";
+
+    if(type === "Sheriff"){
+        roleID = "1510682249782362334";
+    }
+
+    if(type === "FHP"){
+        roleID = "1510682249782362336";
+    }
+
+    if(type === "Fire"){
+        roleID = "1510682249782362335";
+    }
+
+    if(type === "Civilian"){
+        roleID = "1510682249828368476";
+    }
+
+
+    fetch("YOUR_WEBHOOK_URL", {
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+
+            content:`<@&${roleID}> New ${type} Application Received!`,
+
+            allowed_mentions:{
+                roles:[roleID]
+            },
+
+            embeds:[{
+
+                title:`New ${type} Application`,
+
+                description:data,
+
+                color:10181046
+
+            }]
+
+        })
+
+    });
+
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("applicationForm");
