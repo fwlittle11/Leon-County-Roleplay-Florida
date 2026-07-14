@@ -86,80 +86,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-        fetch(webhookURL, {
+       fetch(webhookURL, {
 
-            method:"POST",
+    method:"POST",
 
+    headers:{
+        "Content-Type":"application/json"
+    },
 
-            headers:{
+    body:JSON.stringify({
 
-                "Content-Type":"application/json"
+        username:"Leon County RP Applications",
 
+        content:`<@&${roleID}> New ${type} Application Received!`,
+
+        allowed_mentions:{
+            roles:[roleID]
+        },
+
+        embeds:[{
+            title:`📋 New ${type} Application`,
+            description:applicationAnswers,
+            color:10181046,
+            footer:{
+                text:"Leon County Roleplay Applications"
             },
+            timestamp:new Date()
+        }]
 
+    })
 
-            body:JSON.stringify({
-
-
-                username:"Leon County RP Applications",
-
-
-                content:`<@&${roleID}> New ${type} Application Received!`,
-
-
-                allowed_mentions:{
-
-                    roles:[roleID]
-
-                },
-
-
-                embeds:[embed]
-
-
-            })
-
-        })
-
-
-
-        .then(response => {
-
-
-            if(response.ok){
-
-    alert("Application Submitted!");
-
-    form.reset();
-
-} else {
-
-    response.text().then(text => {
-        console.log(text);
-        alert("Failed to send application.");
-    });
-
-}
-
-
-        })
-
-
-
-        .catch(error => {
-
-
-            console.error(error);
-
-
-            alert("Error sending application.");
-
-
-        });
-
-
-
-    });
+})
 
 
 });
