@@ -981,3 +981,20 @@ form .main-button {
     color: white;
     line-height: 1.8;
 }
+.store-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #8a2be2;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.store-button:hover {
+    background: #c77dff;
+    color: black;
+    transform: scale(1.05);
+}
