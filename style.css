@@ -560,3 +560,154 @@ form .main-button {
     width:100%;
 
 }
+/* APPLICATION PAGES */
+
+
+.application-page {
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:60px 20px;
+
+}
+
+
+
+.application-box {
+
+    width:700px;
+
+    background:#0b0b0b;
+
+    border:2px solid #8a2be2;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    box-shadow:0 0 25px rgba(138,43,226,0.35);
+
+}
+
+
+
+.application-box h2 {
+
+    text-align:center;
+
+    color:#c77dff;
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.application-box p {
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.application-box label {
+
+    display:block;
+
+    color:#c77dff;
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.application-box input,
+.application-box textarea,
+.application-box select {
+
+
+    width:100%;
+
+    padding:12px;
+
+    background:#050505;
+
+    color:white;
+
+    border:2px solid #8a2be2;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+
+
+.application-box textarea {
+
+    height:130px;
+
+    resize:vertical;
+
+}
+
+
+
+.application-box button {
+
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:15px;
+
+
+    background:#0b0b0b;
+
+    color:#c77dff;
+
+    border:2px solid #8a2be2;
+
+    border-radius:12px;
+
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+
+
+.application-box button:hover {
+
+
+    background:#8a2be2;
+
+    color:white;
+
+    box-shadow:0 0 25px #8a2be2;
+
+
+}
