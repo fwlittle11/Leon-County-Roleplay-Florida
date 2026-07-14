@@ -40,115 +40,106 @@
 
 
 
-<!-- APPLICATION FORM -->
 
-<section class="application-form">
-
-
-<h1>Sheriff's Office Application</h1>
+<section class="application-page">
 
 
+<div class="application-box">
 
 
-<div class="form-group">
+<h2>⭐ Sheriff's Office Application</h2>
+
+<p>
+Apply to join the Leon County Sheriff's Office.
+Serve the county through professional law enforcement roleplay.
+</p>
+
+
+
+
+<form id="applicationForm">
+
 
 <label>Discord Username</label>
 
-<input type="text" placeholder="Enter your Discord username">
+<input 
+name="Discord Username"
+type="text"
+placeholder="Enter your Discord username"
+>
 
-</div>
 
-
-
-
-<div class="form-group">
 
 <label>FiveM Username</label>
 
-<input type="text" placeholder="Enter your FiveM name">
+<input 
+name="FiveM Username"
+type="text"
+placeholder="Enter your FiveM name"
+>
 
-</div>
 
-
-
-
-<div class="form-group">
 
 <label>Age</label>
 
-<input type="number" placeholder="Enter your age">
-
-</div>
-
-
-
-
-<div class="form-group">
-
-<label>Have you been in a law enforcement roleplay department before?</label>
-
-<select>
-
-<option>Yes</option>
-
-<option>No</option>
-
-</select>
-
-</div>
+<input 
+name="Age"
+type="number"
+placeholder="Enter your age"
+>
 
 
 
+<label>Previous Roleplay Experience</label>
 
-<div class="form-group">
-
-<label>Describe your previous roleplay experience</label>
-
-<textarea placeholder="Explain your experience..."></textarea>
-
-</div>
+<textarea
+name="RP Experience"
+placeholder="Describe your previous RP experience">
+</textarea>
 
 
 
+<label>Why do you want to join the Sheriff's Office?</label>
 
-<div class="form-group">
-
-<label>Why do you want to become a Sheriff’s Deputy?</label>
-
-<textarea placeholder="Explain your motivation..."></textarea>
-
-</div>
+<textarea
+name="Reason For Joining"
+placeholder="Explain why you want to become a deputy">
+</textarea>
 
 
 
+<label>What qualities make a good deputy?</label>
 
-<div class="form-group">
-
-<label>What qualities make a good law enforcement officer?</label>
-
-<textarea placeholder="Your answer..."></textarea>
-
-</div>
+<textarea
+name="Deputy Qualities"
+placeholder="Your answer">
+</textarea>
 
 
 
+<label>How would you handle a traffic stop that becomes hostile?</label>
 
-<div class="form-group">
-
-<label>How would you handle a difficult situation during patrol?</label>
-
-<textarea placeholder="Your answer..."></textarea>
-
-</div>
+<textarea
+name="Traffic Stop Scenario"
+placeholder="Explain your response">
+</textarea>
 
 
 
+<label>How would you handle a fellow deputy violating department policy?</label>
 
-<div class="form-group">
+<textarea
+name="Policy Violation"
+placeholder="Explain your response">
+</textarea>
 
-<label>Are you willing to follow department policies and chain of command?</label>
 
-<select>
+
+<label>Are you willing to follow the Sheriff's Office Chain of Command?</label>
+
+<select name="Chain Of Command">
+
+<option>Select Answer</option>
 
 <option>Yes</option>
 
@@ -156,35 +147,40 @@
 
 </select>
 
-</div>
+
+
+<label>Do you agree to follow all server rules and SOPs?</label>
+
+<select name="Rules Agreement">
+
+<option>Select Answer</option>
+
+<option>Yes</option>
+
+<option>No</option>
+
+</select>
 
 
 
 
-<div class="form-group">
-
-<label>Why should the Sheriff's Office accept you?</label>
-
-<textarea placeholder="Explain why you should be selected..."></textarea>
-
-</div>
-
-
-
-
-<button class="submit-button">
-
-Submit Application
-
+<button type="submit">
+Submit Sheriff Application
 </button>
 
+
+
+</form>
+
+
+</div>
 
 
 </section>
 
 
 
-<form id="applicationForm">
+
 <footer>
 
 <p>
@@ -194,7 +190,10 @@ Submit Application
 </footer>
 
 
+
 <script src="../script.js"></script>
+
+
 </body>
 
 </html>
