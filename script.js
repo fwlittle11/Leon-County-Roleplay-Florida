@@ -128,19 +128,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if(response.ok){
 
+    alert("Application Submitted!");
 
-                alert("Application Submitted!");
+    form.reset();
 
+} else {
 
-                form.reset();
+    response.text().then(text => {
+        console.log(text);
+        alert("Failed to send application.");
+    });
 
-
-            } else {
-
-
-                alert("Failed to send application.");
-
-            }
+}
 
 
         })
