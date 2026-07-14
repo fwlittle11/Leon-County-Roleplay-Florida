@@ -27,31 +27,36 @@ if(type === "EMS"){
     }
 
 
-    fetch("YOUR_WEBHOOK_URL", {
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json"
+const embed = {
+    title: "📋 New Leon County RP Application",
+    description: applicationAnswers,
+    color: 10181046
+};
+
+
+fetch(webhookURL, {
+
+    method:"POST",
+
+    headers:{
+        "Content-Type":"application/json"
+    },
+
+    body:JSON.stringify({
+
+        username: "Leon County RP Applications",
+
+        content:`<@&${roleID}> New ${type} Application Received!`,
+
+        allowed_mentions:{
+            roles:[roleID]
         },
 
-        body:JSON.stringify({
+        embeds:[embed]
 
-            content:`<@&${roleID}> New ${type} Application Received!`,
+    })
 
-            allowed_mentions:{
-                roles:[roleID]
-            },
-
-            embeds:[{
-
-                title:`New ${type} Application`,
-
-                description:data,
-
-                color:10181046
-
-            }]
-
-        })
+})
 
     });
 
