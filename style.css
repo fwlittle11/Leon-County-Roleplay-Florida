@@ -317,7 +317,48 @@ transform:translateY(-5px);
 box-shadow:0 0 30px #8a2be2;
 
 }
+/* HOMEPAGE SECTIONS */
 
+.hero + .division-page {
+    margin-top: 40px;
+}
+
+
+.hero ~ .division-page {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+/* Department Section Highlight */
+
+.hero ~ .division-page:last-of-type {
+
+    margin-top: 50px;
+
+    border-top: 2px solid #8a2be2;
+
+    border-bottom: 2px solid #8a2be2;
+
+    background:#080808;
+
+    box-shadow:0 0 20px rgba(138,43,226,0.25);
+
+}
+
+
+
+.hero ~ .division-page h2 {
+
+    font-size:40px;
+
+    color:#c77dff;
+
+    text-shadow:0 0 15px #8a2be2;
+
+    margin-bottom:35px;
+
+}
 
 
 .division-card h3 {
