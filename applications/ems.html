@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Civilian Application | Leon County RP</title>
+<title>Fire Department Application | Leon County RP</title>
 
 <link rel="stylesheet" href="../style.css">
 
@@ -14,8 +14,6 @@
 
 
 <body>
-
-
 
 
 <nav class="navbar">
@@ -39,122 +37,110 @@
 </div>
 
 </nav>
-  
-
-
-<section class="application-form">
-
-
-<h1>Civilian Application</h1>
 
 
 
 
-<div class="form-group">
+<section class="application-page">
+
+
+<div class="application-box">
+
+
+<h2>🚒 Fire Department Application</h2>
+
+<p>
+Apply to join Leon County Fire Rescue.
+Respond to emergencies, protect the community, and provide professional fire & rescue roleplay.
+</p>
+
+
+
+
+<form id="applicationForm">
+
+
 
 <label>Discord Username</label>
 
-<input type="text" placeholder="Enter your Discord username">
+<input 
+name="Discord Username"
+type="text"
+placeholder="Enter your Discord username"
+>
 
-</div>
 
-
-
-
-<div class="form-group">
 
 <label>FiveM Username</label>
 
-<input type="text" placeholder="Enter your FiveM name">
+<input 
+name="FiveM Username"
+type="text"
+placeholder="Enter your FiveM name"
+>
 
-</div>
 
-
-
-
-<div class="form-group">
 
 <label>Age</label>
 
-<input type="number" placeholder="Enter your age">
-
-</div>
-
-
-
-
-<div class="form-group">
-
-<label>What type of civilian roleplay are you interested in?</label>
-
-<select>
-
-<option>Business Owner</option>
-
-<option>Employee</option>
-
-<option>Criminal Roleplay</option>
-
-<option>Custom Character</option>
-
-<option>Other</option>
-
-</select>
-
-</div>
+<input 
+name="Age"
+type="number"
+placeholder="Enter your age"
+>
 
 
 
+<label>Previous Fire/EMS Roleplay Experience</label>
 
-<div class="form-group">
-
-<label>Describe your character</label>
-
-<textarea placeholder="Tell us about your character..."></textarea>
-
-</div>
+<textarea
+name="Emergency Experience"
+placeholder="Describe your previous experience">
+</textarea>
 
 
 
+<label>Why do you want to join Fire Rescue?</label>
 
-<div class="form-group">
-
-<label>What is your roleplay experience?</label>
-
-<textarea placeholder="Explain your experience..."></textarea>
-
-</div>
+<textarea
+name="Reason For Joining"
+placeholder="Explain why you want to become a firefighter">
+</textarea>
 
 
 
+<label>What are the responsibilities of a firefighter?</label>
 
-<div class="form-group">
-
-<label>What kind of story do you want to create in Leon County?</label>
-
-<textarea placeholder="Explain your goals..."></textarea>
-
-</div>
+<textarea
+name="Firefighter Responsibilities"
+placeholder="Your answer">
+</textarea>
 
 
 
+<label>How would you handle arriving at a major emergency scene?</label>
 
-<div class="form-group">
-
-<label>How do you handle conflicts during roleplay?</label>
-
-<textarea placeholder="Your answer..."></textarea>
-
-</div>
+<textarea
+name="Emergency Scenario"
+placeholder="Explain your actions">
+</textarea>
 
 
 
+<label>How important is teamwork in Fire Rescue?</label>
 
-<div class="form-group">
+<textarea
+name="Teamwork"
+placeholder="Explain your answer">
+</textarea>
 
-<label>Do you agree to follow server rules and roleplay standards?</label>
 
-<select>
+
+<label>Are you willing to follow Fire Department SOPs?</label>
+
+<select name="SOP Agreement">
+
+<option>Select Answer</option>
 
 <option>Yes</option>
 
@@ -162,35 +148,40 @@
 
 </select>
 
-</div>
+
+
+<label>Are you willing to work with Law Enforcement and EMS?</label>
+
+<select name="Multi Department Cooperation">
+
+<option>Select Answer</option>
+
+<option>Yes</option>
+
+<option>No</option>
+
+</select>
 
 
 
 
-<div class="form-group">
-
-<label>Anything else you would like us to know?</label>
-
-<textarea placeholder="Additional information..."></textarea>
-
-</div>
-
-
-
-
-<button class="submit-button">
-
-Submit Application
-
+<button type="submit">
+Submit Fire Application
 </button>
 
+
+
+</form>
+
+
+</div>
 
 
 </section>
 
 
 
-<form id="applicationForm">
+
 <footer>
 
 <p>
@@ -200,7 +191,10 @@ Submit Application
 </footer>
 
 
+
 <script src="../script.js"></script>
+
+
 </body>
 
 </html>
