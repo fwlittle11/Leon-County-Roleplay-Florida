@@ -919,3 +919,62 @@ form .main-button {
     line-height: 1.8;
     font-size: 16px;
 }
+/* =========================
+   RULES PAGE
+========================= */
+
+.rules-page {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.rules-page h2 {
+    color: #c77dff;
+    font-size: 45px;
+    text-shadow: 0 0 15px #8a2be2;
+    margin-bottom: 20px;
+}
+
+.rules-page > p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+
+.rules-card {
+    background: #0b0b0b;
+    border: 2px solid #8a2be2;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(138,43,226,.3);
+    transition: .3s;
+}
+
+
+.rules-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px #8a2be2;
+}
+
+
+.rules-card h3 {
+    color: #c77dff;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+
+.rules-card p {
+    color: white;
+    line-height: 1.8;
+}
