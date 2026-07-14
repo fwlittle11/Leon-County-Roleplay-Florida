@@ -22,22 +22,22 @@ let type = formData.get("type") || "General";
 let roleID = "";
 
 
-if(Type === "Sheriff"){
+if(type === "Sheriff"){
     roleID = "1510682249782362334";
 }
-else if(Type === "FHP"){
+else if(type === "FHP"){
     roleID = "1510682249782362336";
 }
-else if(Type === "Police"){
+else if(type === "Police"){
     roleID = "1510682249782362333";
 }
-else if(Type === "Fire"){
+else if(type === "Fire"){
     roleID = "1510682249782362335";
 }
-else if(Type === "EMS"){
+else if(type === "EMS"){
     roleID = "1510682249782362335";
 }
-else if(Type === "Civilian"){
+else if(type === "Civilian"){
     roleID = "1510682249828368476";
 }
 
