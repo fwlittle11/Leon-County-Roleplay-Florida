@@ -331,3 +331,29 @@ font-size:25px;
 margin-bottom:20px;
 
 }
+/* MATCH STORE + RULES WITH DIVISIONS */
+
+.store-page,
+.rules-page {
+
+text-align:center;
+
+padding:50px;
+
+}
+
+
+.store-cards,
+.rules-container {
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:30px;
+
+margin-top:40px;
+
+}
