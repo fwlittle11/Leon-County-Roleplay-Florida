@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         event.preventDefault();
 
-        const webhookURL = "YOUR_WEBHOOK_URL_HERE";
+        const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW";
 
         const formData = new FormData(form);
 
