@@ -952,14 +952,16 @@ form .main-button {
 
 .rules-page h2 {
     color: #c77dff;
-    font-size: 35px;
-    margin-bottom: 15px;
+    font-size: 50px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px #8a2be2;
 }
 
-.rules-page > p {
-    color: white;
-    font-size: 16px;
-    margin-bottom: 25px;
+.rules-card h3 {
+    color: #c77dff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .rules-grid {
@@ -985,6 +987,6 @@ form .main-button {
 
 .rules-card p {
     color: white;
-    line-height: 1.5;
-    font-size: 14px;
+    line-height: 1.7;
+    font-size: 17px;
 }
