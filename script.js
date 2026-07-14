@@ -10,18 +10,19 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
 
-        const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW";
+        // PUT YOUR NEW DISCORD WEBHOOK HERE
+        const webhookURL = "YOUR_NEW_WEBHOOK_HERE";
 
 
         const formData = new FormData(form);
 
 
-        let answers = "";
+        let applicationAnswers = "";
 
 
         formData.forEach((value, key) => {
 
-            answers += `**${key}:** ${value}\n`;
+            applicationAnswers += `**${key}:** ${value}\n`;
 
         });
 
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             title: "📋 New Leon County RP Application",
 
-            description: answers,
+            description: applicationAnswers,
 
             color: 10181046,
 
@@ -67,18 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         })
 
-
         .then(response => {
 
             if (response.ok) {
 
-                alert("Application Submitted Successfully!");
+                alert("Application Submitted!");
 
                 form.reset();
 
             } else {
 
-                alert("Application failed to send.");
+                alert("Failed to send application.");
 
             }
 
