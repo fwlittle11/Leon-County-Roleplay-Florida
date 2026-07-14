@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LEO Application | Leon County RP</title>
+<title>Police Application | Leon County RP</title>
 
 <link rel="stylesheet" href="../style.css">
 
@@ -40,83 +40,95 @@
 
 
 
-<!-- APPLICATION FORM -->
-
-<section class="application-form">
+<section class="application-page">
 
 
-<h1>Tallahassee Police Department</h1>
+<div class="application-box">
 
 
-<div class="form-group">
+<h2>🚔 Police Department Application</h2>
+
+<p>
+Apply to join the Leon County Police Department.
+Answer all questions honestly and professionally.
+</p>
+
+
+
+<form id="applicationForm">
+
 
 <label>Discord Username</label>
 
-<input type="text" placeholder="Enter your Discord username">
+<input 
+name="Discord Username" 
+type="text" 
+placeholder="Enter your Discord username"
+>
 
-</div>
 
-
-
-
-<div class="form-group">
 
 <label>FiveM Username</label>
 
-<input type="text" placeholder="Enter your FiveM name">
+<input 
+name="FiveM Username" 
+type="text" 
+placeholder="Enter your FiveM name"
+>
 
-</div>
 
-
-
-
-<div class="form-group">
 
 <label>Age</label>
 
-<input type="number" placeholder="Enter your age">
+<input 
+name="Age" 
+type="number" 
+placeholder="Enter your age"
+>
 
 
 
+<label>How long have you been playing FiveM?</label>
 
-<div class="form-group">
-
-<label>What is your previous roleplay experience?</label>
-
-<textarea placeholder="Explain your experience..."></textarea>
-
-</div>
+<textarea 
+name="FiveM Experience"
+placeholder="Explain your experience">
+</textarea>
 
 
 
+<label>Why do you want to join the Police Department?</label>
 
-<div class="form-group">
-
-<label>Why do you want to join Law Enforcement?</label>
-
-<textarea placeholder="Explain why you want to join..."></textarea>
-
-</div>
+<textarea 
+name="Reason For Joining"
+placeholder="Explain why you want to become a police officer">
+</textarea>
 
 
 
+<label>What does good roleplay mean to you?</label>
 
-<div class="form-group">
-
-<label>What does professionalism mean to you?</label>
-
-<textarea placeholder="Your answer..."></textarea>
-
-</div>
+<textarea 
+name="Roleplay Knowledge"
+placeholder="Explain your understanding of quality RP">
+</textarea>
 
 
 
+<label>How would you handle a situation where another officer breaks server rules?</label>
 
-<div class="form-group">
+<textarea 
+name="Rule Violation Scenario"
+placeholder="Your answer">
+</textarea>
 
-<label>Have you read and agreed to follow server rules?</label>
 
-<select>
+
+<label>Are you willing to follow department SOPs and Chain of Command?</label>
+
+<select name="SOP Agreement">
+
+<option>Select Answer</option>
 
 <option>Yes</option>
 
@@ -124,33 +136,38 @@
 
 </select>
 
-</div>
+
+
+<label>Do you understand that failure to follow rules may result in removal?</label>
+
+<select name="Rules Agreement">
+
+<option>Select Answer</option>
+
+<option>Yes</option>
+
+<option>No</option>
+
+</select>
 
 
 
-
-<div class="form-group">
-
-<label>Why should we accept your application?</label>
-
-<textarea placeholder="Explain why you should be accepted..."></textarea>
-
-</div>
-
-
-
-
-<button class="submit-button">
-Submit Application
+<button type="submit">
+Submit Police Application
 </button>
 
+
+
+</form>
+
+
+</div>
 
 
 </section>
 
 
 
-<form id="applicationForm">
 <footer>
 
 <p>
@@ -160,7 +177,10 @@ Submit Application
 </footer>
 
 
+
 <script src="../script.js"></script>
+
+
 </body>
 
 </html>
