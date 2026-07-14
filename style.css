@@ -727,8 +727,6 @@ form .main-button {
     line-height:1.6;
 
 }
-/* ===== STORE & RULES CARDS (Same Style as Divisions) ===== */
-
 .store-grid,
 .rules-grid{
     display:grid;
@@ -759,4 +757,34 @@ form .main-button {
     color:#c77dff;
     margin-bottom:15px;
     font-size:28px;
+}
 
+.store-card p,
+.rules-card p{
+    color:#fff;
+    line-height:1.6;
+}
+
+.purchase-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#8a2be2;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.section-title{
+    text-align:center;
+    color:#c77dff;
+    font-size:42px;
+    margin:60px 0 20px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+}
