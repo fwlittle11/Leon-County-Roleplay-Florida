@@ -98,3 +98,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+const bannerData = [
+
+{
+title:"🚔 Professional Departments",
+text:"Join Police, Sheriff's Office, Florida Highway Patrol, Fire Rescue, EMS, and Civilian Operations."
+},
+
+{
+title:"⭐ Realistic Roleplay",
+text:"Experience immersive roleplay with active staff and realistic scenarios."
+},
+
+{
+title:"🛒 Official Store",
+text:"Purchase department packs, civilian packs, and support Leon County Roleplay."
+},
+
+{
+title:"🛡️ Professional Staff Team",
+text:"Our dedicated staff work hard to provide a fair, organized, and enjoyable experience."
+}
+
+];
+
+const title = document.getElementById("bannerTitle");
+const text = document.getElementById("bannerText");
+
+if(title && text){
+
+let current = 0;
+
+setInterval(()=>{
+
+current = (current + 1) % bannerData.length;
+
+title.style.opacity = 0;
+text.style.opacity = 0;
+
+setTimeout(()=>{
+
+title.textContent = bannerData[current].title;
+text.textContent = bannerData[current].text;
+
+title.style.opacity = 1;
+text.style.opacity = 1;
+
+},300);
+
+},4000);
+
+}
