@@ -753,3 +753,72 @@ form .main-button {
     line-height:1.6;
 
 }
+/* ===== STORE & RULES CARDS (Same Style as Divisions) ===== */
+
+.store-grid,
+.rules-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.store-card,
+.rules-card{
+    background:#111;
+    border:2px solid #8a2be2;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(138,43,226,.25);
+}
+
+.store-card:hover,
+.rules-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(138,43,226,.55);
+}
+
+.store-card h3,
+.rules-card h3{
+    color:#c77dff;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.store-card p,
+.rules-card p{
+    color:#fff;
+    line-height:1.6;
+}
+
+.purchase-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#8a2be2;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.purchase-btn:hover{
+    background:#a855f7;
+    transform:scale(1.05);
+}
+
+.section-title{
+    text-align:center;
+    color:#c77dff;
+    font-size:42px;
+    margin:60px 0 20px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+}
