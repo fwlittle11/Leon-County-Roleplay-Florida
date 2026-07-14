@@ -1,213 +1,143 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-const form = document.getElementById("applicationForm");
+    const form = document.getElementById("applicationForm");
 
-if (!form) return;
+    if (!form) return;
 
+    form.addEventListener("submit", function(event){
 
-form.addEventListener("submit", function(event){
+        event.preventDefault();
 
-event.preventDefault();
+        const webhookURL = "YOUR_WEBHOOK_URL_HERE";
 
+        const formData = new FormData(form);
 
-const webhookURL = "https://discordapp.com/api/webhooks/1526393396778762310/FfWtw47GJg5NK5Smo3q3e5oX_j_2c2CwI-E1umRY3Jl_KXqugK84zqdXlx8yEzV1EAOW"
+        let type = formData.get("type") || "General";
 
+        let roleID = "";
 
-const formData = new FormData(form);
-
-
-let type = formData.get("type") || "General";
-
-
-let roleID = "";
-
-
-if(type === "Sheriff"){
-    roleID = "1510682249782362334";
-}
-else if(type === "FHP"){
-    roleID = "1510682249782362336";
-}
-else if(type === "Police"){
-    roleID = "1510682249782362333";
-}
-else if(type === "Fire"){
-    roleID = "1510682249782362335";
-}
-else if(type === "EMS"){
-    roleID = "1510682249782362335";
-}
-else if(type === "Civilian"){
-    roleID = "1510682249828368476";
-}
-
-
-
-let answers = "";
-
-
-formData.forEach((value,key)=>{
-
-answers += `**${key}:** ${value}\n`;
-
-});
-
-
-
-fetch(webhookURL,{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-
-body:JSON.stringify({
-
-username:"Leon County RP Applications",
-
-content:`<@&${roleID}> New ${type} Application Received!`,
-
-allowed_mentions:{
-roles:[roleID]
-},
-
-
-embeds:[{
-
-    title:`📨 ${type} Application Submitted`,
-
-    description:
-    "A new application has been received and is awaiting review.",
-
-    color:10181046,
-
-    thumbnail:{
-        url:"https://i.imgur.com/yourlogo.png"
-    },
-
-    fields:[
-
-        {
-            name:"👤 Applicant",
-            value:formData.get("Discord Username") || "Not Provided",
-            inline:true
-        },
-
-        {
-            name:"🎮 FiveM Username",
-            value:formData.get("FiveM Username") || "Not Provided",
-            inline:true
-        },
-
-        {
-            name:"📂 Department",
-            value:type,
-            inline:true
-        },
-
-        {
-            name:"📝 Application Responses",
-            value:answers.length > 1024
-                ? answers.substring(0,1020) + "..."
-                : answers
+        if(type === "Sheriff"){
+            roleID = "1510682249782362334";
+        }
+        else if(type === "FHP"){
+            roleID = "1510682249782362336";
+        }
+        else if(type === "Police"){
+            roleID = "1510682249782362333";
+        }
+        else if(type === "Fire"){
+            roleID = "1510682249782362335";
+        }
+        else if(type === "EMS"){
+            roleID = "1510682249782362335";
+        }
+        else if(type === "Civilian"){
+            roleID = "1510682249828368476";
         }
 
-    ],
+        let answers = "";
 
-    footer:{
-        text:"Leon County Roleplay Recruitment Division"
-    },
+        formData.forEach((value, key) => {
+            if(key !== "type"){
+                answers += `**${key}:** ${value}\n`;
+            }
+        });
 
-    timestamp:new Date().toISOString()
+        fetch(webhookURL, {
 
-}]
+            method: "POST",
 
+            headers: {
+                "Content-Type": "application/json"
+            },
 
+            body: JSON.stringify({
 
-.then(async response => {
+                username: "Leon County RP Applications",
 
-    const text = await response.text();
+                content: `<@&${roleID}> New ${type} Application Received!`,
 
-    console.log("Discord Response:", text);
+                allowed_mentions: {
+                    roles: [roleID]
+                },
 
-    if (response.ok) {
+                embeds: [{
 
-        alert("Application Submitted!");
+                    title: `📨 ${type} Application Submitted`,
 
-        form.reset();
+                    description: "A new application has been received and is awaiting review.",
 
-    } else {
+                    color: 10181046,
 
-        alert("Failed to send application.");
+                    fields: [
 
-    }
+                        {
+                            name: "📂 Department",
+                            value: type,
+                            inline: true
+                        },
 
-})
+                        {
+                            name: "👤 Applicant",
+                            value: formData.get("Discord Username") || "Not Provided",
+                            inline: true
+                        },
 
+                        {
+                            name: "🎮 FiveM Username",
+                            value: formData.get("FiveM Username") || "Not Provided",
+                            inline: true
+                        },
 
-.catch(error=>{
+                        {
+                            name: "📝 Application Responses",
+                            value: answers.length > 1024
+                                ? answers.substring(0, 1020) + "..."
+                                : answers
+                        }
 
-console.error(error);
+                    ],
 
-alert("Webhook Error");
+                    footer: {
+                        text: "Leon County Roleplay Recruitment Division"
+                    },
+
+                    timestamp: new Date().toISOString()
+
+                }]
+
+            })
+
+        })
+
+        .then(async response => {
+
+            const text = await response.text();
+
+            console.log("Discord Response:", text);
+
+            if(response.ok){
+
+                alert("Application Submitted!");
+
+                form.reset();
+
+            } else {
+
+                alert("Failed to send application.");
+
+            }
+
+        })
+
+        .catch(error => {
+
+            console.error(error);
+
+            alert("Webhook Error");
+
+        });
+
+    });
 
 });
-
-
-});
-
-
-});
-const bannerData = [
-
-{
-title:"🚔 Professional Departments",
-text:"Join Police, Sheriff's Office, Florida Highway Patrol, Fire Rescue, EMS, and Civilian Operations."
-},
-
-{
-title:"⭐ Realistic Roleplay",
-text:"Experience immersive roleplay with active staff and realistic scenarios."
-},
-
-{
-title:"🛒 Official Store",
-text:"Purchase department packs, civilian packs, and support Leon County Roleplay."
-},
-
-{
-title:"🛡️ Professional Staff Team",
-text:"Our dedicated staff work hard to provide a fair, organized, and enjoyable experience."
-}
-
-];
-
-const title = document.getElementById("bannerTitle");
-const text = document.getElementById("bannerText");
-
-if(title && text){
-
-let current = 0;
-
-setInterval(()=>{
-
-current = (current + 1) % bannerData.length;
-
-title.style.opacity = 0;
-text.style.opacity = 0;
-
-setTimeout(()=>{
-
-title.textContent = bannerData[current].title;
-text.textContent = bannerData[current].text;
-
-title.style.opacity = 1;
-text.style.opacity = 1;
-
-},300);
-
-},4000);
-
-}
